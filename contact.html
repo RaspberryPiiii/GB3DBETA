@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - GB3D</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Logo -->
+    <div class="logo">
+        <img src="logo.png" alt="GB3D Logo">
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contact Form Section -->
+    <div class="container">
+        <h2>Contact Us</h2>
+        <p>Have a question or want a custom design? Reach out below:</p>
+
+        <div class="contact-box">
+            <form onsubmit="sendEmail(event)">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+                <textarea id="message" placeholder="Your Inquiry" required></textarea>
+                <button type="submit">Submit Inquiry</button>
+            </form>
+
+            <p>Or email us directly at:</p>
+            <a href="mailto:gavinrbone@gmail.com" class="email-link">gavinrbone@gmail.com</a>
+        </div>
+    </div>
+
+    <script>
+        function sendEmail(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Get form values
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var message = document.getElementById('message').value;
+
+            // Create mailto link with subject and body pre-filled
+            var mailtoLink = `mailto:gavinrbone@gmail.com?subject=Custom Inquiry from ${encodeURIComponent(name)}&body=Name: ${encodeURIComponent(name)}%0AEmail: ${encodeURIComponent(email)}%0AInquiry: ${encodeURIComponent(message)}`;
+
+            // Open mail client
+            window.location.href = mailtoLink;
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GB3D - 3D Printing Business</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Background Effects */
+        .background-effects {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+        }
+
+        .background-effects div {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 50%;
+            animation: float 6s infinite alternate ease-in-out;
+            filter: blur(10px);
+        }
+
+        @keyframes float {
+            from { transform: translateY(0px); }
+            to { transform: translateY(40px); }
+        }
+
+        .effect1 { top: 10%; left: 15%; width: 120px; height: 120px; animation-duration: 5s; }
+        .effect2 { top: 50%; left: 80%; width: 100px; height: 100px; animation-duration: 7s; }
+        .effect3 { top: 75%; left: 30%; width: 80px; height: 80px; animation-duration: 6s; }
+    </style>
+</head>
+<body>
+    <div class="background-effects">
+        <div class="effect1"></div>
+        <div class="effect2"></div>
+        <div class="effect3"></div>
+    </div>
+
+    <!-- Logo -->
+    <div class="logo">
+        <img src="logo.png" alt="GB3D Logo">
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h2>Welcome to GB3D - High-Quality 3D Printed Products</h2>
+        <p>Innovative designs made with precision and creativity.</p>
+
+        <div class="product">
+            <h3>Vertebrae Business Card Holder</h3>
+            <div class="collage">
+                <img src="image1.jpg" alt="Vertebrae Business Card Holder">
+                <img src="image2.jpg" alt="Vertebrae Business Card Holder">
+                <img src="image3.jpg" alt="Vertebrae Business Card Holder">
+            </div>
+            <p>A unique, flexible business card holder designed to impress.</p>
+            <div class="price">$15.00 (or $20 with a custom name)</div>
+        </div>
+
+        <div class="product">
+            <h3>Pyramid Passthrough Fidget</h3>
+            <div class="collage">
+                <img src="pyramid1.jpg" alt="Pyramid Fidget">
+                <img src="pyramid2.jpg" alt="Pyramid Fidget">
+                <img src="pyramid3.jpg" alt="Pyramid Fidget">
+            </div>
+            <p>A mesmerizing pyramid fidget toy with a unique passthrough design.</p>
+            <div class="price">$6 for 1, $10 for 2 (+$1 for multi-color)</div>
+        </div>
+    </div>
+</body>
+</html>
